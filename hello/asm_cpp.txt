@@ -1,0 +1,16 @@
+00007FF63D8F1450 | 55               | push rbp
+00007FF63D8F1451 | 48:89E5          | mov rbp,rsp
+00007FF63D8F1454 | 48:83EC 20       | sub rsp,20
+00007FF63D8F1458 | E8 23010000      | call hello_cpp.7FF63D8F1580
+00007FF63D8F145D | 48:8D15 9C2B0000 | lea rdx,qword ptr ds:[7FF63D8F4000]        ; "Hello World!"
+00007FF63D8F1464 | 48:8B05 352F0000 | mov rax,qword ptr ds:[<&std::cout>]
+00007FF63D8F146B | 48:89C1          | mov rcx,rax
+00007FF63D8F146E | E8 1D000000      | call <JMP.&std::basic_ostream<char,std...>  ; operator<< (چاپ رشته)
+00007FF63D8F1473 | 48:89C1          | mov rcx,rax
+00007FF63D8F1476 | 48:8B05 332F0000 | mov rax,qword ptr ds:[<&JMP.&std::basic_...>]  ; std::endl
+00007FF63D8F147D | 48:89C2          | mov rdx,rax
+00007FF63D8F1480 | E8 1B000000      | call <JMP.&std::ostream::operator<<(std...>  ; operator<< (endl)
+00007FF63D8F1485 | B8 00000000      | mov eax,0
+00007FF63D8F148A | 48:83C4 20       | add rsp,20
+00007FF63D8F148E | 5D               | pop rbp
+00007FF63D8F148F | C3               | ret

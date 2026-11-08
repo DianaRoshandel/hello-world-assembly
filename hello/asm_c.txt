@@ -1,0 +1,7 @@
+00007FF6D9BB145D | 48:8D05 9C2B0000 | lea rax,qword ptr ds:[7FF6D9BB4000]   ; "Hello World!"
+00007FF6D9BB1464 | 48:89C1          | mov rcx,rax
+00007FF6D9BB1467 | E8 84120000      | call <JMP.&puts>
+00007FF6D9BB146C | B8 00000000      | mov eax,0
+00007FF6D9BB1471 | 48:83C4 20       | add rsp,20
+00007FF6D9BB1475 | 5D               | pop rbp
+00007FF6D9BB1476 | C3               | ret
